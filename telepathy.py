@@ -3,11 +3,9 @@ from telethon import TelegramClient, events, sync
 from config import Config
 import sys
 
-client
-def setup() :
-    global client
-    client = TelegramClient('default_session', Config.api_id, Config.api_hash)
-    client.start()
+# setting up
+client = TelegramClient('default_session', Config.api_id, Config.api_hash)
+client.start()
 
 def help() :
     print("Usage: telepathy --username=<username> --message=<message>\nExample: telepathy --username=oddlyspaced --message=\"Test Message\"")
