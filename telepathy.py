@@ -1,12 +1,16 @@
+#!/bin/python3
 from telethon import TelegramClient, events, sync
 from config import Config
 import sys
 
-api_id = Config.api_id
-api_hash = Config.api_hash
+client
+def setup() :
+    global client
+    client = TelegramClient('default_session', Config.api_id, Config.api_hash)
+    client.start()
 
-client = TelegramClient('default_session', api_id, api_hash)
-client.start()
+def help() :
+    print("Usage: telepathy --username=<username> --message=<message>\nExample: telepathy --username=oddlyspaced --message=\"Test Message\"")
 
 username = ""
 message = ""
@@ -20,3 +24,5 @@ for arg in args :
 
 if len(username) > 0 and len(message) > 0 :
     client.send_message(username, message)
+else :
+    help()
