@@ -26,6 +26,8 @@ You can also place a script under /usr/bin containg the following content to acc
 
 `#!/bin/bash`
 
-`python3 /location/to/telepathy.py $@`
+`cd /location/to/folder/`
+
+`python3 telepathy.py $@`
 
 
